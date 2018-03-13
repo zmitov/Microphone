@@ -81,7 +81,7 @@ namespace Microphone.Consul
             var port = uri.Port;
             var host = uri.Host;
 
-            var check = $"{schema}://{host}:{port}{_consulHealthCheckPath}";
+            var check = $"{schema}://localhost:{port}{_consulHealthCheckPath}";
             var t = new List<string>(tags);
             if (_nameResolution == ConsulNameResolution.EbayFabio)
             {
